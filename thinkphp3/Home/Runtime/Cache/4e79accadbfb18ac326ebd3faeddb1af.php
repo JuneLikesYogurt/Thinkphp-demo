@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>tj 不存在  <a href='_APP_/Index/inde'>返回首页</a>

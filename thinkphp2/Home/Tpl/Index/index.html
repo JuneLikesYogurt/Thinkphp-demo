@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/test.css">
+	<script type="text/javascript" src="__PUBLIC__/JS/test.js"></script> -->
+
+	<!-- <import type='js' file='JS.test'/> -->
+	<!-- 导入Public文件夹下面的JS目录中的test.js文件，import标签不可以省略type属性-->
+	<!-- <import type='js' file='JS.my' basepath='./Other'/>
+	<import type='css' file='CSS.my' basepath='./Other'/> -->
+
+	<load href='__PUBLIC__/CSS/test.css'/>
+	<!-- <load href='__PUBLIC__/JS/test.js'/> -->
+
+	<title>Index</title>
+</head>
+<body>
+	<!-- <p>{$name}</p> -->
+
+	<!-- <if condition='$sex eq "男"'>
+		男人是泥巴做的
+	<else/>
+		女人是水做的
+	</if> -->
+
+	<!-- <if condition='$age lt 18'>
+		未成年
+		<elseif condition='$age eq 18'/>
+		青春年少
+		<else/>
+		成年
+	</if> -->
+
+<!-- 	<switch name='$number'>
+		<case value='1'>一个和尚挑水吃</case>
+		<case value='2'>两个和尚抬水吃</case>
+		<case value='3'>三个和尚没水吃</case>
+		<default/>这是默认值
+	</switch>	 -->
+
+	<!-- <table border="1" width="500">
+		<for start='10' end='00' name='j' step='-2' comparison='gt'>
+			<tr><td>{$j}</td><td>abc</td></tr>
+		</for>
+	</table> -->
+
+	<!-- <volist name='list' id='v' offset='1' length='3'>
+		{$v}<br>
+	</volist> -->
+
+	<!-- <volist name='list' id='v'>
+		{$v.username}<br>
+	</volist> -->
+	
+	<!-- <foreach name='list' item='v' key='k'>
+		{$k}-----{$v}<br>
+	</foreach> -->
+
+	<!-- 
+	<table border="1" width="500">
+		<foreach name='list' item='v'>
+			<tr>
+				<td>{$v.id}</td>
+				<td>{$v.username}</td>
+				<td>{$v.password}</td> 
+				<if condition='$v.sex eq 1'>
+					<td>男</td>
+					<else/>
+						<td>女</td>
+				</if>
+			</tr>
+		</foreach>
+	</table> -->
+
+	<p>这里是首页</p>
+	<a href="__URL__/next">跳转到下一页</a>
+</body>
+</html>

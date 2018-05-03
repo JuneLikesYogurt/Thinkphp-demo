@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>__APP__ 不存在  <a href='__APP__/Index/inde'>返回首页</a>

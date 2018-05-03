@@ -1,0 +1,17 @@
+[ 2017-06-05T18:16:22+08:00 ] 0.0.0.0 /thinkphp/admin.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002149s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.004272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004950s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001271s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001144s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000650s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000914s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004593s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000966s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001139s ]
+

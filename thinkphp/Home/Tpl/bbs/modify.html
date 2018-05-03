@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modify</title>
+</head>
+<body>
+    <form action="/thinkphp/index.php/bbs/update" method="post">
+        <input type="hidden" name="id" value="<{$data.id}>">
+    	用户名：<input type="text" name="username" value="<{$data.username}>" /><br/>
+    	内容： <input type="text" name="content"/><br/>
+    	<input type="submit" value="提交修改"/>
+    </form>
+</body>
+</html>

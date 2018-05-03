@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index-bbs</title>
+	<script type="text/javascript">
+		function jump() {
+			window.location="/thinkphp/index.php/bbs/add";
+		}
+	</script>
+</head>
+<body>
+    <form action='__URL__/search' method='post'>
+        留言内容：<input type="text" name="content"/>
+        <input type="submit" value="查询"/>
+        <br><br>
+    </form>
+    
+    <table border="1" width="500" align="center">
+    	<tr>
+    	    <!-- <th>id</th> -->
+    	    <th>username</th>
+    	    <th>content</th>
+    	    <th>操作</th>
+    	</tr>
+    	<volist name="data" id="vo">
+            <tr>
+                <!-- <td> <{$vo.id}> </td> -->
+                <td> <{$vo.username}> </td>
+                <td> <{$vo.content}> </td>
+                <td> <a href="/thinkphp/index.php/bbs/del/id/<{$vo.id}>">删除</a> | <a href="/thinkphp/index.php/bbs/modify">修改</a> </td>
+            </tr>
+    	</volist>
+    </table>
+    <center>
+	    <button onclick="jump()">添加留言</button>
+    </center>
+    
+</body>
+</html>

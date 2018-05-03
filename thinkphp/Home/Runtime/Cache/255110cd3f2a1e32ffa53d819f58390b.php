@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><b>治理显示了加粗的字体</b>
