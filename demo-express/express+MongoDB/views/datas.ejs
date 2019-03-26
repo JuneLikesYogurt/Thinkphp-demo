@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USERLIST</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Userlist</h1>
+    <ul>
+        <%for(var i in datas){%>
+            <li>
+                <a href="mailto:<%=datas[i].email%>">
+                    <%=datas[i].name%>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>

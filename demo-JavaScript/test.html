@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分享</title>
+</head>
+<style type="text/css">
+    body{padding:0;margin:0;}
+    #n_content{width:200px;height:200px;background:red;opacity:0.3;filter:Alpha(opacity=30);}
+
+</style>
+<body>
+<div id="n_content"></div>
+<script type="text/javascript">
+    window.onload = function(){
+        var odiv = document.getElementById("n_content");
+        odiv.onmouseover = function(){
+            startMove(100);
+        }
+        odiv.onmouseout = function(){
+            startMove(30);
+        }
+        var timer = null;
+        var alpha = 30;
+        function startMove(iTarget){
+            var odiv = document.getElementById("n_content");
+            clearInterval(timer);
+            timer = setInterval(function(){
+                var speed = 0;
+                if(alpha>iTarget){
+                    speed = -10;
+                }else{
+                    speed = 10;
+                }
+                if(alpha==iTarget){
+                    clearInterval(timer);
+                }else{
+                    alpha+=speed;
+                    odiv.style.filter = 'alpha(opacity='+ alpha +')';
+                    odiv.style.opacity= alpha/100;
+                }
+
+            },30);
+        };
+
+    }
+</script>   
+</body>
+</html>

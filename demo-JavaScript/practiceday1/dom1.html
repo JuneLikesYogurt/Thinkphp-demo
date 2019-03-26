@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom1</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		window.onload = function () {
+			var oTab = document.getElementById('tab1');
+			var id = oTab.tBodies[0].rows.length + 1;
+			// var oldColor = '';
+
+			var oBtn = document.getElementById('btn1');
+			var oName = document.getElementById('name');
+			var oAge = document.getElementById('age');
+
+			oBtn.onclick = function () {
+				var oTr = document.creatElement('tr');
+
+				var oTd = document.creatElement('td');
+				oTd.innerHTML = id++;
+				oTr.appendChild(oTd);
+
+				var.oTd = document.creatElement('td');
+				oTd.innerHTML = oName.value;
+				oTr.appendChild(oTd);
+
+				var.oTd = document.creatElement('td');
+				oTd.innerHTML = oAge.value;
+				oTr.appendChild(oTd);
+
+				var.oTd = document.creatElement('td');
+				oTd.innerHTML = '<a href="javascript:;">删除</a>';
+				oTr.appendChild(oTd);
+
+				oTd.getElementsByTagName('a')[0].onclick = function () {
+					oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+				}
+
+				oTab.tBodies[0].appendChild(oTr);
+			}
+
+
+			// alert(oTab.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[1].getElementsByTagName('td')[1].innerHTML);
+
+			// alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);
+
+			// for(var i = 0;i < oTab.tBodies[0].rows.length;i++){
+			// 	oTab.tBodies[0].rows[i].onmouseover = function () {
+			// 		oldColor = this.style.background;
+			// 		this.style.background = 'green';
+			// 	};
+			// 	oTab.tBodies[0].rows[i].onmouseout = function () {
+			// 		this.style.background = oldColor;
+			// 	};
+
+			// 	if(i%2){
+			// 		oTab.tBodies[0].rows[i].style.background = '#CCC';
+			// 	}
+			// 	else{
+			// 		oTab.tBodies[0].rows[i].style.background = '';
+			// 	}
+			// }
+		};
+	</script>
+
+</head>
+<body>
+	姓名：<input id="name" type="text" >
+	年龄：<input id="age" type="text" >
+	<input id="btn1" type="button" value="添加">
+
+	<table id="tab1" border="1" width="500">
+		<thead>
+			<td>ID</td>
+			<td>姓名</td>
+			<td>年龄</td>
+			<td>操作</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>jaoi</td>
+				<td>12</td>
+				<td><a href="javascript:;">删除</a></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>sjiolfj</td>
+				<td>15</td>
+				<td><a href="javascript:;">删除</a></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>wwej</td>
+				<td>15</td>
+				<td><a href="javascript:;">删除</a></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>swef</td>
+				<td>65</td>
+				<td><a href="javascript:;">删除</a></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>mlij</td>
+				<td>61</td>
+				<td><a href="javascript:;">删除</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

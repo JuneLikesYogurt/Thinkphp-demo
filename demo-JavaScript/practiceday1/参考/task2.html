@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table class="table">
+		<tr><th>index</th><th>name</th><td>sex</td><td>opt</td></tr>
+		<tr><td>1</td><td>NAME1</td><td>SEX1</td><td><a class='delete' href="javascript:;">delete</a></td></tr>
+		<tr><td>2</td><td>NAME2</td><td>SEX2</td><td><a class='delete' href="javascript:;">delete</a></td></tr>
+		<tr><td>3</td><td>NAME3</td><td>SEX3</td><td><a class='delete' href="javascript:;">delete</a></td></tr>
+	</table>
+	<script type="text/javascript">
+	  // 选择元素，类似于document.getElementsByClassName和getElementById
+		// 参考js高级程序设计第11章
+		var table = document.querySelector(".table");
+
+		// 给table添加点击click事件
+		// 参考js高级程序设计第13章
+		table.addEventListener('click', function(e) {
+			// 采用事件委托，不是给每行delete都添加点击事件，提高性能
+			// 事件委托见js高程第13.5章
+			if(e.target.className == 'delete') {
+				// 节点层次，取点击对象（即a标签）的父元素的父元素即点击行的tr
+				// 节点层次关系见js高程10.1章
+				var tr = e.target.parentNode.parentNode;
+				// 移除节点
+				// 第10章
+				tr.parentNode.removeChild(tr);
+				changeIndex();
+			}
+		});
+
+		function changeIndex() {
+			var trs = table.querySelectorAll('tr');
+			for(var i = 1;i < trs.length;i++){
+				trs[i].childNodes[0].innerHTML = i;
+			}
+		}
+
+	</script>
+</body>
+</html>

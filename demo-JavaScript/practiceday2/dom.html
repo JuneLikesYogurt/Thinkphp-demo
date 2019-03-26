@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom评论框</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// window.onload = function () {
+		// 	var warn = document.getElementById('warn');
+		// 	var num = document.getElementById('num');
+		// 	var cont = document.getElementById('content');
+
+		// 	// var temp = 201;
+
+		// 	function numCount () {
+		// 		var temp = cont.value.length;
+		// 		num.innerHTML = temp;
+
+		// 		if (temp > 200) {
+		// 			warn.style.color = 'red';
+		// 	 	}
+		// 	}
+		// }
+		function numCount () {
+			var warn = document.getElementById('warn');
+			var num = document.getElementById('num');
+			var cont = document.getElementById('content');
+
+			var temp = cont.value.length;
+			num.innerHTML = temp;
+
+			if (temp > 200) {
+				warn.style.color = 'red';
+		 	}
+		 	else {
+		 		warn.style.color = 'black';
+		 	}
+		}
+	</script>
+</head>
+<body>
+
+	<textarea id="content" style="width: 500px; height: 200px" onkeypress="numCount()"></textarea>
+	<p id="warn"><span id="num"></span>/200</p>
+
+</body>
+</html>

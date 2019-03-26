@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IsPalindromeString</title>
+	<script type="text/javascript">
+		var x = 'abcbA';
+		/*var y = 'abcda';*/
+
+		function palindrome (str) {
+			var re = /[\w_]/g;// 删除字符串中不必要的字符
+			var lowRegStr = str.toLowerCase().replace(re,'');// 将字符串变成小写字符
+			len = regStr.length;
+
+			for (var i = 0;i < (len / 2);i++){
+				if(regStr[i] !== regStr[len-1-i]){
+					return false;
+				}
+			}
+			return true;
+		}
+
+		var m = palindrome (x);
+		alert (m);
+	</script>
+</head>
+<body>
+		<h1>IsPalindromeString</h1>
+</body>
+</html>
