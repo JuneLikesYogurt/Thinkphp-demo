@@ -1,2 +1,2 @@
 # Drill
-JavaScript和React学习时的代码
+JavaScript学习时的代码

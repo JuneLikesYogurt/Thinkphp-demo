@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局</title>
+    <!-- 参考
+    https://blog.csdn.net/mao871863224/article/details/102896978 -->
+</head>
+<body>
+    <h1>浮动解决方案</h1>
+    <section class="layout_float">
+        <style media="screen">
+            /* 相对位置的坐标参考系
+            是以自己上一次的位置（x，y）作为原点（0，0） */
+            .layout_float .left {
+                float: left;
+                background-color: red;
+                width: 300px;
+            }
+            .layout_float .right {
+                float: right;
+                background-color: blue;
+                width: 300px;
+            }
+            .layout_float .center {
+                background-color: yellow;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left">左</div>
+            <div class="right">右</div>
+            <div class="center">
+                中间自适应中间自适应
+            </div>
+        </article>
+    </section>
+
+    <h1>绝对定位</h1>
+    <section class="layout_absolute">
+        <style media="screen">
+            .layout_absolute .left-right-center>div {
+                position: absolute;
+            }
+             /* 如果元素没有已定位的祖先元素，
+            那么它的位置则是相对于最初的包含块 */
+            .layout_absolute .left {
+                left: 0px;
+                background-color: red;
+                width: 300px;
+            }
+            .layout_absolute .right {
+                right: 0px;
+                background-color: blue;
+                width: 300px;
+            }
+            .layout_absolute .center {
+                left: 300px;
+                right: 300px;
+                background-color: yellow;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left">左</div>
+            <div class="right">右</div>
+            <div class="center">
+                中间自适应中间自适应
+            </div>
+        </article>
+    </section>
+
+
+    <section class="layout_flex">
+        <style media="screen">
+            .layout_flex  {
+                margin-top: 150px;
+            }
+            .layout_flex .left-right-center {
+                display: flex;
+            }
+            .layout_flex .left {
+                background-color: red;
+                width: 300px;
+            }
+            .layout_flex .center {
+                flex: 1;
+                background-color: yellow;
+            }
+            .layout_flex .right {
+                background-color: blue;
+                width: 300px;
+            }
+            
+        </style>
+        <h1>flex布局</h1>
+        <article class="left-right-center">
+            <div class="left">左</div>
+            <div class="center">
+                中间自适应中间自适应
+            </div>
+            <div class="right">右</div>
+        </article>
+    </section>
+    
+
+
+
+    <section class="layout_table">
+        <h1>表格布局</h1>
+        <style media="screen">
+            .layout_table .left-right-center {
+                width: 100%;
+                height: 100px;
+                display: table;
+            }
+            .layout_table .left-right-center>div {
+                display: table-cell;
+            }
+            .layout_table .left {
+                background-color: red;
+                width: 300px;
+            }
+            .layout_table .center {
+                background-color: yellow;
+            }
+            .layout_table .right {
+                background-color: blue;
+                width: 300px;
+            }
+            
+        </style>
+        
+        <article class="left-right-center">
+            <div class="left">左</div>
+            <div class="center">
+                中间自适应中间自适应
+            </div>
+            <div class="right">右</div>
+        </article>
+    </section>
+
+
+
+    <section class="layout_grid">
+        <h1>表格布局</h1>
+        <style media="screen">
+            .layout_grid .left-right-center {
+                width: 100%;
+                display: grid;
+                /* grid-template-rows 设置行的数量以及宽度*/
+                /* grid-template-columns 设置列的数量及宽度*/
+                grid-template-columns: 300px auto 300px;
+            }
+            .layout_grid .left {
+                background-color: red;
+            }
+            .layout_grid .center {
+                background-color: yellow;
+            }
+            .layout_grid .right {
+                background-color: blue;
+            }
+            
+        </style>
+        
+        <article class="left-right-center">
+            <div class="left">左</div>
+            <div class="center">
+                中间自适应中间自适应
+            </div>
+            <div class="right">右</div>
+        </article>
+    </section>
+    
+</body>
+</html>
